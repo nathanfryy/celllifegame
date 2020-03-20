@@ -1,0 +1,37 @@
+
+****************************************************************************************************
+****************************************************************************************************
+**                                                                                                **
+**                           **      **  ******  ******                                           **
+**                           **      **  ******  ******                                           **
+**                           **      **  **      **                                               **
+**                           **      **  ****    ****                                             **
+**                           **      **  ****    ****                                             **
+**                           **      **  **      **                                               **
+**                           ******  **  **      ******                                           **
+**                           ******  **  **      ******  Version 0.8                              **
+**                                                                                                **
+**    This program implements a cellular biology simulation. Each cell can have 8 neighboring     **
+**    cells. The state of a cell is determined by the number of neighbors that cell has:          **
+**                                                                                                **
+**       0 to 1 neighbors dies of lack of symbiotic nutrients                                     **
+**       2 to 3 neighbors lives comfortably                                                       **
+**       4 to 8 neighbors dies of over crowding                                                   **
+**       exactly 3 neighbors a new cell is generated                                              **
+**                                                                                                **
+**    You can use the following commands:                                                         **
+**                                                                                                **
+**       Run Simulation     (R): displays the next X generations of cell life [default is 1]      **
+**       Skip X Generations (K): skip over the next X generations of cell life                    **
+**       New Random Gen     (N): redraws the screen with a random sample of cells                 **
+**       Save Generation    (S): saves the current generation to disk                             **
+**       Open Generation    (O): opens a previously saved generation                              **
+**       More               (M): displays the settings menu                                       **
+**       Help               (H): displays this help screen                                        **
+**       Quit               (Q): quits the program                                                **
+**                                                                                                **
+**       Most commands will take parameters such as: r10   k1000    ogliders                      **
+**                                                                                                **
+****************************************************************************************************
+****************************************************************************************************
+
