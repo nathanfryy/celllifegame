@@ -26,8 +26,10 @@ class Life(object):
         while command != 'quit':
             if command == 'help':
                 self.help('help3.txt', 'Press <return> to continue. ')
+                self.display()
             elif command == 'more menu':
                 self.__menu = 'more'
+                self.display()
             elif command == 'back to main menu':
                     self.__menu = 'main'
             elif command == 'run simulation':
@@ -36,6 +38,7 @@ class Life(object):
                 self.skip_generations(parameter)
             elif command == 'random world':
                 self.random()
+                self.display()
             elif command == 'save world':
                 self.save(parameter, './worlds/')
             elif command == 'open world':
@@ -52,7 +55,6 @@ class Life(object):
                 self.set_geometry()
             elif command == 'library':
                 self.from_library(parameter, './library/')
-            self.display()
             command, parameter = self.get_command()
         print('See ya, thanks for playing!')
 
@@ -256,7 +258,6 @@ class Life(object):
         :return: world
         """
         self.__world.randomize(self.__fillrate)
-        self.display()
 
     def save(self, filename, myPath='./'):
         """
