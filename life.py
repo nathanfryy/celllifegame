@@ -164,7 +164,7 @@ class Life(object):
             print(string)
             time.sleep(self.__delay)
         print(self.menu())
-
+    
     def skip_generations(self, generations):
         """
         Displays the next generation of the world
@@ -177,16 +177,20 @@ class Life(object):
             prompt = 'How many generations do you wanna skip?'
             generations = toolbox.get_integer_between(1, 10000, prompt)
         print(f'Skipping {generations} generations.', end='')
-        while True:
-            for generation in range(generations):
-                self.__world.next_generation()
-                self.__world.is_stable(self.__world)
-                if generation % 100 == 0:
-                    print('.', end='')
+
+        for generation in range(generations):
+             self.__world.next_generation()
+             if self.__world.is_stable() == True:
+                 print('It is stable now.')
+                 break
+             else:
+                 pass
+             if generation % 100 == 0:
+                print('.', end='')
         print(' done!')
         time.sleep(2)
         self.display()
-
+        
     def change_fillrate(self, fillrate):
         """
         Change the fillrate for the simulation.
